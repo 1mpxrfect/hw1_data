@@ -17,14 +17,14 @@ class TestAggregatedThreatScore(unittest.TestCase):
 
     def test_max_threat(self):
         departments = [
-            {"name": "Engineering", "importance": 1, "scores": [95] * 50},
-            {"name": "Marketing", "importance": 2, "scores": [95] * 50},
-            {"name": "Finance", "importance": 3, "scores": [95] * 50},
-            {"name": "HR", "importance": 4, "scores": [95] * 50},
-            {"name": "Science", "importance": 5, "scores": [95] * 50}
+            {"name": "Engineering", "importance": 1, "scores": [90] * 50},
+            {"name": "Marketing", "importance": 2, "scores": [90] * 50},
+            {"name": "Finance", "importance": 3, "scores": [90] * 50},
+            {"name": "HR", "importance": 4, "scores": [90] * 50},
+            {"name": "Science", "importance": 5, "scores": [90] * 50}
         ]
         score = calculate_aggregated_threat_score(departments)
-        self.assertEqual(score, 95)
+        self.assertEqual(score, 90)
 
     def test_mixed_threat_and_importance(self):
         departments = [
